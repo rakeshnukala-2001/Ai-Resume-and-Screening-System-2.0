@@ -1,0 +1,1226 @@
+/* =========================================================
+   OPEN SANS
+   ========================================================= */
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+  --navy: #14295a;
+  --navy-dark: #12295b;
+  --text-muted: #4a5878;
+  --border: #c9d0e0;
+  --placeholder: #7b849a;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.reg-page {
+  --base: min(1.16vw, 2vh);
+  --u: var(--base);
+
+  width: 100%;
+
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns:
+    calc(var(--u) * 40)
+    calc(var(--u) * 46);
+
+  grid-template-rows: calc(var(--u) * 50);
+
+  justify-content: center;
+  align-content: center;
+
+  font-family: "Open Sans", "Segoe UI", Arial, Helvetica, sans-serif;
+
+  color: var(--navy);
+
+  background: linear-gradient(
+    90deg,
+    #566b9c 0,
+    #566b9c calc(50% - var(--u) * 43),
+    #8996bb calc(50% - var(--u) * 20),
+    #c6cce0 calc(50% - var(--u) * 4),
+    #ffffff calc(50% + var(--u) * 7),
+    #ffffff 100%
+  );
+
+  max-width: 2560px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.reg-left {
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: calc(var(--u) * 2.5) calc(var(--u) * 5.4) calc(var(--u) * 2.5)
+    calc(var(--u) * 0.6);
+}
+
+/* =========================================================
+   PLATFORM TEXT
+========================================================= */
+
+.reg-platform {
+  margin: 0 0 calc(var(--u) * 0.9);
+
+  font-size: calc(var(--u) * 1.3);
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  color: #fff;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.reg-heading {
+  margin: 0 0 calc(var(--u) * 0.6);
+
+  font-size: calc(var(--u) * 2.05);
+
+  line-height: calc(var(--u) * 2.3);
+
+  font-weight: 700;
+
+  color: #fff;
+}
+
+/* =========================================================
+   SUB TEXT
+========================================================= */
+
+.reg-sub {
+  margin: 0 0 calc(var(--u) * 1.1);
+
+  font-size: max(7.5px, calc(var(--u) * 0.8));
+
+  line-height: 1.65;
+
+  color: #eef1f8;
+}
+
+/* =========================================================
+   TAGLINE
+========================================================= */
+
+.reg-tagline {
+  margin: 0 0 calc(var(--u) * 0.8);
+
+  font-size: calc(var(--u) * 1.55);
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: var(--navy-dark);
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ILLUSTRATION
+========================================================= */
+
+.reg-illustration {
+  flex: 1 1 0;
+
+  min-height: 0;
+
+  width: 100%;
+
+  max-width: none;
+
+  margin: 0 0 calc(var(--u) * 1.1);
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: center;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.reg-quote {
+  flex-shrink: 0;
+
+  width: 100%;
+
+  height: calc(var(--u) * 3.6);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: var(--u);
+
+  border-radius: calc(var(--u) * 0.5);
+
+  background: rgba(255, 255, 255, 0.45);
+
+  color: var(--text-muted);
+
+  font-size: max(7.5px, calc(var(--u) * 0.88));
+
+  line-height: 1.25;
+}
+
+.reg-quote p {
+  margin: 0;
+}
+
+.reg-quote-icon {
+  flex-shrink: 0;
+
+  width: calc(var(--u) * 1.4);
+
+  height: calc(var(--u) * 1.4);
+
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   RIGHT SECTION
+   HEIGHT REDUCED
+   WIDTH UNCHANGED
+========================================================= */
+
+.reg-right {
+  /* --u controls horizontal sizing. Keep it unchanged. */
+  --u: calc(var(--base) * 0.9);
+
+  /* --rh controls only vertical sizing. */
+  --rh: calc(var(--base) * 1.15);
+
+  min-width: 0;
+  min-height: 0;
+
+  padding: calc(var(--rh) * 2.1) 0 0 calc(var(--u) * 2);
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* =========================================================
+   FORM
+   WIDTH KEPT SAME
+========================================================= */
+
+.reg-form {
+  width: calc(var(--u) * 43);
+
+  max-width: none;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.reg-title {
+  margin: 0 0 calc(var(--u) * 0.25) calc(var(--u) * 0.8);
+
+  font-size: calc(var(--u) * 1.95);
+
+  line-height: 1.1;
+
+  font-weight: 400;
+
+  color: var(--navy);
+}
+
+/* =========================================================
+   TITLE SUBTEXT
+========================================================= */
+
+.reg-title-sub {
+  margin: 0 0 calc(var(--u) * 0.9) calc(var(--u) * 0.8);
+
+  font-size: max(8.5px, calc(var(--u) * 0.9));
+
+  line-height: 1.1;
+
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: calc(var(--u) * 0.65);
+}
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.field {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: calc(var(--u) * 0.65);
+
+  min-width: 0;
+}
+
+/* =========================================================
+   FULL WIDTH FIELD
+========================================================= */
+
+.field.full {
+  margin-bottom: calc(var(--u) * 0.8);
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.field label {
+  margin-bottom: calc(var(--u) * 0.3);
+
+  font-size: max(8.5px, calc(var(--u) * 0.85));
+
+  line-height: 1.1;
+
+  font-weight: 500;
+
+  color: var(--navy);
+}
+
+/* =========================================================
+   INPUT + SELECT
+========================================================= */
+
+.field input,
+.field select {
+  width: 100%;
+
+  height: calc(var(--u) * 2.8);
+
+  padding: 0 calc(var(--u) * 0.9);
+
+  font-family: inherit;
+
+  font-size: max(8.5px, calc(var(--u) * 0.85));
+
+  color: #5b647c;
+
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  border-radius: calc(var(--u) * 0.45);
+
+  outline: none;
+
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+/* =========================================================
+   FULL WIDTH SELECT
+========================================================= */
+
+.field.full select {
+  height: calc(var(--u) * 2.8);
+
+  border-radius: calc(var(--u) * 0.7);
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.field input::placeholder {
+  color: var(--placeholder);
+}
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--navy);
+
+  box-shadow: 0 0 0 2px rgba(20, 41, 90, 0.12);
+}
+
+/* =========================================================
+   SELECT WRAPPER
+========================================================= */
+
+.select-wrap {
+  position: relative;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.select-wrap select {
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  -moz-appearance: none;
+
+  padding-right: calc(var(--u) * 3.4);
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SELECT ARROW
+========================================================= */
+
+.select-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  right: calc(var(--u) * 1.8);
+
+  top: 50%;
+
+  width: calc(var(--u) * 0.6);
+
+  height: calc(var(--u) * 0.6);
+
+  border-right: max(1.2px, calc(var(--u) * 0.18)) solid var(--navy);
+
+  border-bottom: max(1.2px, calc(var(--u) * 0.18)) solid var(--navy);
+
+  transform: translateY(-70%) rotate(45deg);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   DATE INPUT
+========================================================= */
+
+.date-input::-webkit-calendar-picker-indicator {
+  display: none;
+
+  -webkit-appearance: none;
+}
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.pw-wrap {
+  position: relative;
+}
+
+.pw-wrap input {
+  padding-right: calc(var(--u) * 3.4);
+}
+
+/* =========================================================
+   EYE BUTTON
+========================================================= */
+
+.eye-btn {
+  position: absolute;
+
+  top: 50%;
+
+  right: calc(var(--u) * 0.8);
+
+  transform: translateY(-50%);
+
+  width: max(15px, calc(var(--u) * 1.8));
+
+  height: max(15px, calc(var(--u) * 1.8));
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   EYE IMAGE
+========================================================= */
+
+.eye-btn img {
+  width: max(12px, calc(var(--u) * 1.4));
+
+  height: max(12px, calc(var(--u) * 1.4));
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* =========================================================
+   VERIFY BUTTON (email + mobile)
+========================================================= */
+
+.verify-wrap {
+  position: relative;
+}
+
+/* button-ku idam vidanum */
+.verify-wrap input {
+  padding-right: calc(var(--u) * 5.6);
+}
+
+.verify-btn {
+  position: absolute;
+  right: calc(var(--u) * 0.6);
+  left: auto;
+
+  /* transform illa, top-ah math-la center pannrom */
+  top: calc(50% - var(--u) * 0.85);
+  transform: none !important;
+
+  width: calc(var(--u) * 4.4) !important;
+  min-width: 0 !important;
+  height: calc(var(--u) * 1.7);
+  margin: 0;
+  padding: 0 !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: inherit;
+  font-size: max(8px, calc(var(--u) * 0.7));
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+
+  color: #fff;
+  background: #3d4f7c;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 1;
+
+  transition: background 0.15s; /* background mattum */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.verify-btn:hover:not(:disabled) {
+  background: var(--navy-dark);
+}
+
+.verify-btn:active,
+.verify-btn:focus,
+.verify-btn:focus-visible {
+  transform: none !important;
+  outline: none;
+}
+
+.verify-btn.verified,
+.verify-btn.verified:hover,
+.verify-btn:disabled {
+  background: #34b36b;
+  color: #fff;
+  cursor: default;
+  opacity: 1;
+}
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.agree input {
+  flex-shrink: 0;
+
+  width: max(8.5px, calc(var(--u) * 0.85));
+
+  height: max(8.5px, calc(var(--u) * 0.85));
+
+  margin: 0;
+
+  accent-color: var(--navy);
+}
+
+/* =========================================================
+   AGREEMENT LINKS
+========================================================= */
+
+.agree a {
+  color: var(--navy);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.agree a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.reg-error {
+  margin: 0 0 calc(var(--u) * 0.6);
+
+  font-size: max(8.5px, calc(var(--u) * 0.85));
+
+  color: #b3261e;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.reg-submit {
+  display: block;
+
+  width: calc(100% - var(--u) * 1.8);
+
+  height: calc(var(--u) * 2.8);
+
+  margin: 0 auto;
+
+  font-family: inherit;
+
+  font-size: max(8.5px, calc(var(--u) * 0.9));
+
+  font-weight: 700;
+
+  color: #fff;
+
+  background: var(--navy-dark);
+
+  border: none;
+
+  border-radius: calc(var(--u) * 0.5);
+
+  cursor: pointer;
+
+  transition: background 0.15s;
+}
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.reg-submit:hover {
+  background: #0d1f47;
+}
+
+/* =========================================================
+   BUTTON FOCUS
+========================================================= */
+
+.reg-submit:focus-visible {
+  outline: 2px solid var(--navy);
+
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.reg-login {
+  margin: calc(var(--u) * 0.7) 0 0;
+
+  text-align: center;
+
+  font-size: max(8.5px, calc(var(--u) * 0.85));
+
+  line-height: 1.1;
+
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.reg-login a {
+  margin-left: calc(var(--u) * 0.6);
+
+  font-weight: 700;
+
+  color: var(--navy);
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   1440px AND ABOVE
+   - left column wider + gap (no overlap)
+   - left margin added
+========================================================= */
+
+@media (min-width: 1440px) {
+  .reg-page {
+    grid-template-columns:
+      calc(var(--u) * 41)
+      minmax(0, 1fr);
+
+    justify-content: start;
+    column-gap: calc(var(--u) * 1);
+
+    /* total content ~86u, so screen-ku ulla fit aagum, center-ah irukum */
+    padding-left: max(0px, calc((min(100vw, 2560px) - var(--u) * 86) / 2));
+  }
+
+  /* LEFT: margin left */
+  .reg-left {
+    padding-left: calc(var(--u) * 2.4);
+    padding-right: calc(var(--u) * 2.6);
+  }
+
+  .reg-tagline {
+    font-size: calc(var(--u) * 1.4);
+  }
+
+  .reg-right {
+    --rh: calc(var(--base) * 1.15);
+
+    height: calc(100% - calc(var(--base) * 8.2));
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    /* right padding add -> form edge-la ottaathu */
+    padding: calc(var(--rh) * 2.1) calc(var(--u) * 2) 0 calc(var(--u) * 2);
+  }
+
+  .reg-form {
+    width: 100%; /* column-ku ulla fit */
+    max-width: calc(
+      var(--u) * 48
+    ); /* perusa screen-la over-ah stretch aagathu */
+    display: block;
+  }
+
+  .field {
+    margin-bottom: calc(var(--rh) * 0.65);
+  }
+  .field.full {
+    margin-bottom: calc(var(--rh) * 0.8);
+  }
+  .field label {
+    margin-bottom: calc(var(--rh) * 0.3);
+  }
+
+  .field input,
+  .field select,
+  .field.full select {
+    height: calc(var(--rh) * 2.8);
+  }
+
+  .agree {
+    margin: calc(var(--rh) * 0.1) 0 calc(var(--rh) * 0.7);
+  }
+  .reg-submit {
+    height: calc(var(--rh) * 2.8);
+  }
+  .reg-login {
+    margin-top: calc(var(--rh) * 0.7);
+  }
+}
+
+/* =========================================================
+   1024px - 1439px
+   - left: margin left, heading mela, quote kela
+   - right: taller
+========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* row height increase -> right side taller */
+  .reg-page {
+    grid-template-rows: calc(var(--u) * 56);
+  }
+
+  .reg-left {
+    margin-left: 0;
+    padding-left: calc(var(--u) * 3); /* margin left */
+    padding-top: calc(var(--u) * 0.8); /* heading mela poga */
+    padding-bottom: calc(var(--u) * 0.6); /* quote kela poga */
+  }
+
+  .reg-right {
+    --rh: calc(var(--base) * 1.5); /* height increase (1.15 -> 1.4) */
+
+    height: 100%;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: calc(var(--rh) * 1.6) 0 0 calc(var(--u) * 2);
+  }
+
+  .reg-form {
+    width: calc(var(--u) * 43);
+
+    display: block;
+  }
+
+  .reg-platform {
+    font-size: max(13px, calc(var(--u) * 1.3));
+  }
+
+  .reg-heading {
+    font-size: max(22px, calc(var(--u) * 2.05));
+  }
+
+  .reg-sub {
+    font-size: max(11.5px, calc(var(--u) * 0.8));
+  }
+
+  .reg-quote {
+    font-size: max(11.5px, calc(var(--u) * 0.88));
+  }
+
+  .reg-title {
+    font-size: max(22px, calc(var(--u) * 1.95));
+  }
+
+  .reg-title-sub {
+    font-size: max(11.5px, calc(var(--u) * 0.9));
+  }
+
+  .field {
+    margin-bottom: calc(var(--rh) * 0.65);
+  }
+
+  .field.full {
+    margin-bottom: calc(var(--rh) * 0.8);
+  }
+
+  .field label {
+    font-size: max(10.5px, calc(var(--u) * 0.85));
+    margin-bottom: calc(var(--rh) * 0.3);
+  }
+
+  .field input,
+  .field select,
+  .field.full select {
+    height: calc(var(--rh) * 2.8);
+    font-size: max(12px, calc(var(--u) * 0.85));
+  }
+
+  .verify-btn {
+    font-size: max(10px, calc(var(--u) * 0.7));
+  }
+
+  .agree {
+    margin: calc(var(--rh) * 0.1) 0 calc(var(--rh) * 0.7);
+
+    font-size: max(11px, calc(var(--u) * 0.85));
+  }
+
+  .reg-error,
+  .reg-login {
+    font-size: max(11px, calc(var(--u) * 0.85));
+  }
+
+  .reg-submit {
+    height: calc(var(--rh) * 2.8);
+    font-size: max(12.5px, calc(var(--u) * 0.9));
+  }
+
+  .reg-login {
+    margin-top: calc(var(--rh) * 0.7);
+  }
+}
+
+/* =========================================================
+   2560px AND ABOVE
+========================================================= */
+
+@media (min-width: 2560px) {
+  .reg-left {
+    margin-left: calc(var(--u) * 1.5);
+  }
+}
+
+/* =========================================================
+   BELOW 1024px
+   RECRUITER STYLE RESPONSIVE
+========================================================= */
+
+@media (max-width: 1023px) {
+  .reg-page {
+    display: block;
+
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow: visible;
+
+    background: linear-gradient(
+      180deg,
+      #7187ad 0%,
+      #859ab8 15%,
+      #b0bed2 30%,
+      #e0e7ef 45%,
+      #f5f7fa 52%,
+      #ffffff 60%,
+      #ffffff 100%
+    );
+  }
+
+  /* LEFT HIDDEN */
+
+  .reg-left {
+    display: none;
+  }
+
+  /* RIGHT */
+
+  .reg-right {
+    padding: clamp(24px, 5vh, 40px) 20px;
+
+    width: 100%;
+
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  /* FORM */
+
+  .reg-form {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+
+  /* TITLE */
+
+  .reg-title {
+    margin-left: 0;
+
+    font-size: 24px;
+  }
+
+  /* SUBTITLE */
+
+  .reg-title-sub {
+    margin: 0 0 22px;
+
+    font-size: 13px;
+  }
+
+  /* ROW */
+
+  .row {
+    gap: 12px;
+  }
+
+  /* FIELD */
+
+  .field {
+    margin-bottom: 14px;
+  }
+
+  .field.full {
+    margin-bottom: 14px;
+  }
+
+  /* LABEL */
+
+  .field label {
+    margin-bottom: 6px;
+
+    font-size: 13px;
+  }
+
+  /* INPUT */
+
+  .field input,
+  .field select,
+  .field.full select {
+    height: 42px;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    border-radius: 6px;
+  }
+
+  /* SELECT */
+
+  .select-wrap select {
+    padding-right: 34px;
+  }
+
+  .select-wrap::after {
+    right: 16px;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-width: 1.6px;
+  }
+
+  /* PASSWORD */
+
+  .pw-wrap input {
+    padding-right: 42px;
+  }
+
+  .eye-btn {
+    right: 10px;
+
+    width: 22px;
+
+    height: 22px;
+  }
+
+  .eye-btn img {
+    width: 18px;
+
+    height: 18px;
+  }
+
+  /* VERIFY */
+
+  .verify-wrap input {
+    padding-right: 90px;
+  }
+
+  .verify-btn {
+    right: 8px;
+    width: 72px !important;
+    height: 26px;
+    top: calc(50% - 13px);
+    font-size: 12px;
+  }
+
+  /* AGREEMENT */
+
+  .agree {
+    gap: 8px;
+
+    margin: 4px 0 16px;
+
+    font-size: 12px;
+  }
+
+  .agree input {
+    width: 14px;
+
+    height: 14px;
+  }
+
+  /* ERROR */
+
+  .reg-error {
+    font-size: 12px;
+  }
+
+  /* BUTTON */
+
+  .reg-submit {
+    width: 100%;
+
+    height: 44px;
+
+    font-size: 14px;
+
+    border-radius: 6px;
+  }
+
+  /* LOGIN */
+
+  .reg-login {
+    margin-top: 16px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   768px AND BELOW
+========================================================= */
+
+@media (max-width: 768px) {
+  .reg-page {
+    background: linear-gradient(
+      180deg,
+      #667fa9 0%,
+      #7d95b5 15%,
+      #a7bccc 30%,
+      #dae4ee 45%,
+      #f4f6fa 53%,
+      #ffffff 61%,
+      #ffffff 100%
+    );
+  }
+
+  .reg-form {
+    max-width: 100%;
+  }
+
+  .field input,
+  .field select {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   640px AND BELOW
+========================================================= */
+
+@media (max-width: 640px) {
+  .reg-right {
+    padding: 16px 16px 28px;
+  }
+
+  .row {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .reg-title {
+    font-size: 22px;
+  }
+}
+
+/* =========================================================
+   425px AND BELOW
+========================================================= */
+
+@media (max-width: 425px) {
+  .reg-right {
+    padding: 12px 12px 24px;
+  }
+
+  .reg-title {
+    font-size: 20px;
+  }
+
+  .field input,
+  .field select,
+  .field.full select {
+    height: 40px;
+
+    font-size: 14px;
+  }
+
+  .reg-submit {
+    height: 42px;
+
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   375px AND BELOW
+========================================================= */
+
+@media (max-width: 375px) {
+  .reg-right {
+    padding: 10px 10px 20px;
+  }
+
+  .reg-title {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+   320px AND BELOW
+========================================================= */
+
+@media (max-width: 320px) {
+  .reg-right {
+    padding: 8px 8px 16px;
+  }
+
+  .reg-title {
+    font-size: 18px;
+  }
+
+  .field label {
+    font-size: 12px;
+  }
+}
